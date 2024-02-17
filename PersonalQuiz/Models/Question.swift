@@ -9,6 +9,42 @@ struct Question {
     let title: String
     let answers: [Answer]
     let answerCategory: AnswerCategory
+    
+    static func getQuestions() -> [Question] {
+        [
+            Question(
+                title: "Какую пищу вы предпочитаете?",
+                answers: [
+                    Answer(title: "Стейк", animal: .dog),
+                    Answer(title: "Рыба", animal: .cat),
+                    Answer(title: "Морковь", animal: .rabbit),
+                    Answer(title: "Кукуруза", animal: .turtle)
+                ],
+                answerCategory: .single
+            ),
+            Question(
+                title: "Что вам нравится болльше?",
+                answers: [
+                    Answer(title: "Плавать", animal: .dog),
+                    Answer(title: "Спать", animal: .cat),
+                    Answer(title: "Обниматься", animal: .rabbit),
+                    Answer(title: "Есть", animal: .turtle)
+                ],
+                answerCategory: .multiple
+            ),
+            Question(
+                title: "Любите ли вы ездить на машине?",
+                answers: [
+                    Answer(title: "Ненавижу", animal: .cat),
+                    Answer(title: "Нервничаю", animal: .rabbit),
+                    Answer(title: "Не замечаю", animal: .turtle),
+                    Answer(title: "Обожаю", animal: .dog)
+                ],
+                answerCategory: .ranged
+            )
+        ]
+        
+    }
 }
 
 struct Answer {
