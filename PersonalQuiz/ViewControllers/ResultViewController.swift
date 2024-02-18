@@ -10,16 +10,17 @@ import UIKit
 final class ResultViewController: UIViewController {
     
     @IBOutlet var resultLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     var results: [Answer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let animalResult = getMostFrequentAnimal(in: results)
         
-        resultLabel.text = "Вы - \(animalResult?.rawValue)"
-        getResult()
-        
+        resultLabel.text = "Вы - \(animalResult!.rawValue)"
+        descriptionLabel.text = animalResult!.definition
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +28,6 @@ final class ResultViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
 
-    
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
@@ -52,11 +52,5 @@ final class ResultViewController: UIViewController {
             }
         }
         return mostFrequentAnimal
-    }
-    
-    func getResult() {
-        let resultAnimal = getMostFrequentAnimal(in: results)
-        print(resultAnimal as Any)
-        
     }
 }

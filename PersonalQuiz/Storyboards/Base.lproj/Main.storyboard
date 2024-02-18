@@ -303,16 +303,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kpx-a1-pLD">
-                                <rect key="frame" x="80" y="236" width="160.5" height="96.5"/>
+                                <rect key="frame" x="24" y="236" width="272" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - ❓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-nx-0xc">
-                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="60"/>
+                                        <rect key="frame" x="56" y="0.0" width="160.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неизвестно" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XL-0s-tCn">
-                                        <rect key="frame" x="32.5" y="76" width="95" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неизвестно" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XL-0s-tCn">
+                                        <rect key="frame" x="88.5" y="76" width="95" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -324,6 +324,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Kpx-a1-pLD" firstAttribute="centerY" secondItem="IxJ-Bi-4wp" secondAttribute="centerY" id="NQs-zb-1Kr"/>
+                            <constraint firstItem="Kpx-a1-pLD" firstAttribute="width" secondItem="IxJ-Bi-4wp" secondAttribute="width" multiplier="0.85" id="dAz-5l-Bv5"/>
                             <constraint firstItem="Kpx-a1-pLD" firstAttribute="centerX" secondItem="IxJ-Bi-4wp" secondAttribute="centerX" id="oXJ-Ct-nKI"/>
                         </constraints>
                     </view>
@@ -335,6 +336,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="descriptionLabel" destination="4XL-0s-tCn" id="WtI-X8-q7f"/>
                         <outlet property="resultLabel" destination="aEA-nx-0xc" id="pmy-8s-v3G"/>
                     </connections>
                 </viewController>
