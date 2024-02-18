@@ -44,6 +44,11 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if questionIndex == questions.count {
+            questionIndex -= 1
+            let resultVC = segue.destination as? ResultViewController
+            resultVC?.results = currentAnswers
+        }
         
     }
     
@@ -138,7 +143,6 @@ private extension QuestionsViewController {
             updateUI()
             return
         }
-        
         performSegue(withIdentifier: "showResult", sender: nil)
     }
 }

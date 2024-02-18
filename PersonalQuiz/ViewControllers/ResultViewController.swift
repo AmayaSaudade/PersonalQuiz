@@ -9,6 +9,8 @@ import UIKit
 
 final class ResultViewController: UIViewController {
     
+    var results: [Answer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
