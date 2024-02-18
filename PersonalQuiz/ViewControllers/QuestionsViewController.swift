@@ -47,7 +47,7 @@ final class QuestionsViewController: UIViewController {
         if questionIndex == questions.count {
             questionIndex -= 1
             let resultVC = segue.destination as? ResultViewController
-            resultVC?.results = currentAnswers
+            resultVC?.results = answersChosen
         }
         
     }
