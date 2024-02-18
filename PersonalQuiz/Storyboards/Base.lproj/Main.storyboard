@@ -131,6 +131,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonAction" destination="mb1-5M-ThZ" eventType="touchUpInside" id="IKc-4d-fgy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -199,6 +202,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonAction" destination="mb1-5M-ThZ" eventType="touchUpInside" id="ajW-c0-rM6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -209,21 +215,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonAction:" destination="mb1-5M-ThZ" eventType="touchUpInside" id="QcE-yI-K2u"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN3-7v-znu">
                                         <rect key="frame" x="0.0" y="50.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonAction:" destination="mb1-5M-ThZ" eventType="touchUpInside" id="4bC-jb-Y2c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-M4-f5O">
                                         <rect key="frame" x="0.0" y="101" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonAction:" destination="mb1-5M-ThZ" eventType="touchUpInside" id="6I7-93-08C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGd-Kp-o7y">
                                         <rect key="frame" x="0.0" y="151.5" width="75" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonAction:" destination="mb1-5M-ThZ" eventType="touchUpInside" id="a5e-YG-cgt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -309,7 +327,13 @@
                             <constraint firstItem="Kpx-a1-pLD" firstAttribute="centerX" secondItem="IxJ-Bi-4wp" secondAttribute="centerX" id="oXJ-Ct-nKI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="edc-ds-AqW"/>
+                    <navigationItem key="navigationItem" title="Результат" id="edc-ds-AqW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="1iF-UL-siK">
+                            <connections>
+                                <action selector="doneButtonAction:" destination="NRT-cf-Wgo" id="DAO-Ph-8CL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umo-kN-7lE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

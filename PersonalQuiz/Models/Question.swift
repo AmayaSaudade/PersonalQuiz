@@ -23,7 +23,7 @@ struct Question {
                 answerCategory: .single
             ),
             Question(
-                title: "Что вам нравится болльше?",
+                title: "Что вам нравится больше?",
                 answers: [
                     Answer(title: "Плавать", animal: .dog),
                     Answer(title: "Спать", animal: .cat),
