@@ -17,6 +17,7 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
+        getMostFrequentAnimal()
     }
     
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
